@@ -1,0 +1,7 @@
+# Compiled TypeScript development bundle.
+/public/ts-bundle.js
+# Compiled TypeScript production bundle.
+/public/ts-bundle.min.js
+
+# Dependency directories
+node_modules/

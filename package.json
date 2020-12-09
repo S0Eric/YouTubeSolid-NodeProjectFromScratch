@@ -1,0 +1,47 @@
+{
+  "name": "solidjstemplate",
+  "version": "1.0.0",
+  "description": "A sample project template for using Solid with TypeScript",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server -d --mode=development",
+    "open": "webpack-dev-server -d --mode=development --open-page /public",
+    "build-dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "watch": "watch \"npm run build-dev\" src"
+  },
+  "keywords": [],
+  "author": "Eric Schmucker",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^14.11.2",
+    "babel-loader": "^8.1.0",
+    "babel-preset-solid": "^0.19.3",
+    "solid-js": "^0.19.3",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "watch": "^1.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "babel": {
+    "presets": [
+      "solid",
+      "@babel/typescript",
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": "3.0.0",
+          "targets": {
+            "chrome": 69
+          }
+        }
+      ]
+    ]
+  }
+}
