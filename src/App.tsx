@@ -1,8 +1,8 @@
 import { Component, createSignal } from "solid-js";
-import { SettingsStore } from "./SettingsStore";
+import { settingsStore } from "./settingsStore";
 
 type AppPropsType = {
-  settings: SettingsStore
+  settings: ReturnType<typeof settingsStore>
 }
 
 export const App: Component<AppPropsType> = ({settings}) => {
@@ -11,10 +11,10 @@ export const App: Component<AppPropsType> = ({settings}) => {
   }
   return (
     <div style={{
-      color: settings.state.textColor,
-      "background-color": settings.state.backgroundColor }}>
+      color: settings.store.textColor,
+      "background-color": settings.store.backgroundColor }}>
       <ButtonBar
-        buttonColor={settings.state.buttonColor}
+        buttonColor={settings.store.buttonColor}
         onLightClick={() => settings.setThemeLight()}
         onDarkClick={() => settings.setThemeDark()}
         onCustomClick={(text, bg, btn) =>

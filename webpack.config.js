@@ -22,7 +22,7 @@ var config = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    publicPath: 'public',
+    publicPath: '',
     filename: 'ts-bundle.min.js',
     path: path.resolve(__dirname, 'public')
   }
@@ -34,8 +34,9 @@ module.exports = (env, argv) => {
         config.optimization.minimize = false;
         config.devtool = 'inline-source-map';
         config.devServer = {
-          overlay: true
-//          contentBase: "public" // Causes source maps to not be found, so --open-page is used in CLI command.
+          static: {
+            directory: path.join(__dirname, 'public')
+          }
         };
         config.output.filename = 'ts-bundle.js'
     }

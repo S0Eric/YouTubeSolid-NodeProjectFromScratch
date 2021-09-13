@@ -1,9 +1,9 @@
-import { render } from "solid-js/dom"
+import { render } from "solid-js/web"
 import { App } from "./App"
-import { SettingsStore } from "./SettingsStore"
+import { settingsStore } from "./settingsStore"
 
 // Create an instance of the settings store.
-const settings = new SettingsStore();
+const settings = settingsStore();
 
 if (window.addEventListener) {
   window.addEventListener("load", () => {

@@ -4,29 +4,28 @@
   "description": "A sample project template for using Solid with TypeScript",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server -d --mode=development",
-    "open": "webpack-dev-server -d --mode=development --open-page /public",
+    "start": "webpack serve --mode=development",
+    "open": "webpack serve --mode=development --open",
     "build-dev": "webpack --mode=development",
     "build": "webpack --mode=production",
     "watch": "watch \"npm run build-dev\" src"
   },
   "keywords": [],
   "author": "Eric Schmucker",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-typescript": "^7.10.4",
-    "@types/node": "^14.11.2",
-    "babel-loader": "^8.1.0",
-    "babel-preset-solid": "^0.19.3",
-    "solid-js": "^0.19.3",
-    "ts-loader": "^8.0.4",
-    "typescript": "^4.0.3",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/node": "^16.9.1",
+    "babel-loader": "^8.2.2",
+    "babel-preset-solid": "^1.1.3",
+    "solid-js": "^1.1.3",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
     "watch": "^1.0.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
   },
   "babel": {
     "presets": [
